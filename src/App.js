@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     console.log('in useEffect');
     const fetchData = async () => {
-      let resp = await axios.get('http://localhost:3002');
+      let resp = await axios.get(process.env.REACT_APP_BACKENDURL);
       let data = await resp.data;
       // console.log(' date from json - ');
       console.log(data);
