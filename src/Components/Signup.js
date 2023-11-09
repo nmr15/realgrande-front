@@ -19,7 +19,7 @@ const SignUp = () =>
     try
     {
       console.log(signUpObj);
-      let resp = await axios.post('http://localhost:3002/signup', { ...signUpObj });
+      let resp = await axios.post(process.env.REACT_APP_BACKENDURL + "signup", { ...signUpObj });
       let data = await resp.data;
       console.log(data);
 
